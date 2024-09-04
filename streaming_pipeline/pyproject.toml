@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "streaming-pipeline"
+version = "0.1.0"
+description = ""
+authors = ["pavanmodi <pmodi1203@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+bytewax = "^0.21.0"
+python-dotenv = "^1.0.1"
+websocket-client = "^1.8.0"
+pydantic = ">=1.8,<2.0"
+unstructured = "^0.15.9"
+sentencepiece = "^0.2.0"
+qdrant-client = "1.1.1"
+fire = "^0.6.0"
+transformers = "^4.44.2"
+torch = "^2.4.0"
+PyYAML = "6.0.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+ruff = "^0.6.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+[[tool.poetry.source]]
+name = "torch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+[tool.ruff.isort]
+case-sensitive = true
