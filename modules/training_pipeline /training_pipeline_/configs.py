@@ -4,7 +4,7 @@ from typing import Any, Dict
 
 from transformers import TrainingArguments
 
-from training_pipeline.data.utils import load_yaml
+from training_pipeline_.data_.utils import load_yaml
 
 
 @dataclass
